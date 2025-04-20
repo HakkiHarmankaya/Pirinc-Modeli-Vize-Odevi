@@ -1,10 +1,13 @@
-#Ödev Amacı
+# Ödev Amacı
+
   Bu ödev, 2024-2025 Bahar Dönemi'nde yürütülen Derin Öğrenme dersi kapsamında hazırlanmış bir vize projesidir. Çalışmada, bir pirinç veri seti kullanılarak farklı pirinç cinslerinin sınıflandırılması amaçlanmıştır. Görüntü işleme teknikleri ve derin öğrenme tabanlı modellerden yararlanılarak bir pirinç tanıma sistemi geliştirilmiştir. Model, görsellerden elde edilen verileri kullanarak beş farklı pirinç türünü (Arborio, Basmati, Ipsala, Jasmine ve Karacadağ) yüksek doğrulukla sınıflandırabilmektedir. Ödev hazır veri seti üzerinden geliştirilmiştir.
 
-##Model Tanımı
-Bu çalışmada, hazır bir pirinç veri seti kullanılarak beş farklı pirinç türünü sınıflandırabilen bir derin öğrenme modeli geliştirdim. Model, eğitim süreci 20 epoch boyunca eğitilmiş ve %99,6 oranında doğruluk elde etmiştir. Bu yüksek doğruluk oranı, modelin veri seti içerisindeki pirinç türlerini büyük bir başarıyla ayırt edebildiğini göstermektedir. Kullanılan derin öğrenme mimarisi sayesinde, model hem eğitim hem de test verisi üzerinde başarılı sonuçlar üretmiştir.
+## Model Tanımı
 
-##Epoch Sonuçları
+ Bu çalışmada, hazır bir pirinç veri seti kullanılarak beş farklı pirinç türünü sınıflandırabilen bir derin öğrenme modeli geliştirdim. Model, eğitim süreci 20 epoch boyunca eğitilmiş ve %99,6 oranında doğruluk elde etmiştir. Bu yüksek doğruluk oranı, modelin veri seti içerisindeki pirinç türlerini büyük bir başarıyla ayırt edebildiğini göstermektedir. Kullanılan derin öğrenme mimarisi sayesinde, model hem eğitim hem de test verisi üzerinde başarılı sonuçlar üretmiştir.
+
+## Epoch Sonuçları
+
 1.	Epoch - accuracy: 0.8386 - loss: 0.3930 - val_accuracy: 0.9751 - val_loss: 0.0760
 2.	Epoch - accuracy: 0.9721 - loss: 0.0866 - val_accuracy: 0.9846 - val_loss: 0.0449
 3.	Epoch - accuracy: 0.9809 - loss: 0.0619 - val_accuracy: 0.9670 - val_loss: 0.0894
@@ -26,18 +29,22 @@ Bu çalışmada, hazır bir pirinç veri seti kullanılarak beş farklı pirinç
 19.	Epoch - accuracy: 0.9934 - loss: 0.0192 - val_accuracy: 0.9901 - val_loss: 0.0341
 20.	Epoch - accuracy: 0.9947 - loss: 0.0165 - val_accuracy: 0.9909 - val_loss: 0.0279
 
-#Grafikler
-Model doğruluk oranı grafiği ve model kayıp grafiği yaptım.
+# Grafikler
 
-##Test Sonuçları
-Test verisi üzerinde gerçekleştirdiğim değerlendirmeler sonucunda model, pirinç türlerini %99,6 doğruluk oranıyla başarılı bir şekilde sınıflandırmıştır. Elde edilen tahminler, gerçek etiketlerle karşılaştırdım ve modelin büyük ölçüde doğru tahminlerde bulunduğu gözlemledim.
+ Model doğruluk oranı grafiği ve model kayıp grafiği yaptım.
 
-##Karşılaşılan Zorluklar
-İlk eğittiğim modelde doğruluk oranı sadece %20 civarındaydı. Bu düşük sonucun sebebinin sınıfların yanlış etiketlenmesi olduğunu fark ettim. Etiketlerde gerekli düzenlemeleri yaptıktan sonra model başarısı artış gösterdi.
+## Test Sonuçları
+
+ Test verisi üzerinde gerçekleştirdiğim değerlendirmeler sonucunda model, pirinç türlerini %99,6 doğruluk oranıyla başarılı bir şekilde sınıflandırmıştır. Elde edilen tahminler, gerçek etiketlerle karşılaştırdım ve modelin büyük ölçüde doğru tahminlerde bulunduğu gözlemledim.
+
+## Karşılaşılan Zorluklar
+
+ İlk eğittiğim modelde doğruluk oranı sadece %20 civarındaydı. Bu düşük sonucun sebebinin sınıfların yanlış etiketlenmesi olduğunu fark ettim. Etiketlerde gerekli düzenlemeleri yaptıktan sonra model başarısı artış gösterdi.
 Daha sonra, görsellerin boyutunu 64x64 yerine 32x32 piksele düşürdüm. Bu sayede model hem daha hızlı eğitildi hem de doğruluk oranı belirgin şekilde arttı.
 
-#Sonuç Olarak
-Modelin eğitim sürecini tamamlayarak başarılı bir şekilde sonuç elde ettim. Eğitilen modeli .h5 formatında kaydettim ve böylece daha sonra yeniden kullanmak üzere hazır hale getirdim.
+# Sonuç Olarak
+
+ Modelin eğitim sürecini tamamlayarak başarılı bir şekilde sonuç elde ettim. Eğitilen modeli .h5 formatında kaydettim ve böylece daha sonra yeniden kullanmak üzere hazır hale getirdim.
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
