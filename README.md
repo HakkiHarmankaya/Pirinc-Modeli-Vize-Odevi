@@ -1,3 +1,49 @@
+#Ödev Amacı
+  Bu ödev, 2024-2025 Bahar Dönemi'nde yürütülen Derin Öğrenme dersi kapsamında hazırlanmış bir vize projesidir. Çalışmada, bir pirinç veri seti kullanılarak farklı pirinç cinslerinin sınıflandırılması amaçlanmıştır. Görüntü işleme teknikleri ve derin öğrenme tabanlı modellerden yararlanılarak bir pirinç tanıma sistemi geliştirilmiştir. Model, görsellerden elde edilen verileri kullanarak beş farklı pirinç türünü (Arborio, Basmati, Ipsala, Jasmine ve Karacadağ) yüksek doğrulukla sınıflandırabilmektedir. Ödev hazır veri seti üzerinden geliştirilmiştir.
+
+##Model Tanımı
+Bu çalışmada, hazır bir pirinç veri seti kullanılarak beş farklı pirinç türünü sınıflandırabilen bir derin öğrenme modeli geliştirdim. Model, eğitim süreci 20 epoch boyunca eğitilmiş ve %99,6 oranında doğruluk elde etmiştir. Bu yüksek doğruluk oranı, modelin veri seti içerisindeki pirinç türlerini büyük bir başarıyla ayırt edebildiğini göstermektedir. Kullanılan derin öğrenme mimarisi sayesinde, model hem eğitim hem de test verisi üzerinde başarılı sonuçlar üretmiştir.
+
+##Epoch Sonuçları
+1.	Epoch - accuracy: 0.8386 - loss: 0.3930 - val_accuracy: 0.9751 - val_loss: 0.0760
+2.	Epoch - accuracy: 0.9721 - loss: 0.0866 - val_accuracy: 0.9846 - val_loss: 0.0449
+3.	Epoch - accuracy: 0.9809 - loss: 0.0619 - val_accuracy: 0.9670 - val_loss: 0.0894
+4.	Epoch - accuracy: 0.9813 - loss: 0.0586 - val_accuracy: 0.9827 - val_loss: 0.0527
+5.	Epoch - accuracy: 0.9853 - loss: 0.0478 - val_accuracy: 0.9497 - val_loss: 0.1459
+6.	Epoch - accuracy: 0.9848 - loss: 0.0470 - val_accuracy: 0.9867 - val_loss: 0.0419
+7.	Epoch - accuracy: 0.9885 - loss: 0.0378 - val_accuracy: 0.9866 - val_loss: 0.0428
+8.	Epoch - accuracy: 0.9877 - loss: 0.0372 - val_accuracy: 0.9913 - val_loss: 0.0296
+9.	Epoch - accuracy: 0.9866 - loss: 0.0407 - val_accuracy: 0.9907 - val_loss: 0.0289
+10.	Epoch - accuracy: 0.9904 - loss: 0.0298 - val_accuracy: 0.9930 - val_loss: 0.0249
+11.	Epoch - accuracy: 0.9908 - loss: 0.0291 - val_accuracy: 0.9711 - val_loss: 0.0880
+12.	Epoch - accuracy: 0.9891 - loss: 0.0306 - val_accuracy: 0.9930 - val_loss: 0.0222
+13.	Epoch - accuracy: 0.9914 - loss: 0.0255 - val_accuracy: 0.9891 - val_loss: 0.0324
+14.	Epoch - accuracy: 0.9921 - loss: 0.0243 - val_accuracy: 0.9893 - val_loss: 0.0348
+15.	Epoch - accuracy: 0.9929 - loss: 0.0235 - val_accuracy: 0.9888 - val_loss: 0.0337
+16.	Epoch - accuracy: 0.9919 - loss: 0.0237 - val_accuracy: 0.9943 - val_loss: 0.0208
+17.	Epoch - accuracy: 0.9943 - loss: 0.0178 - val_accuracy: 0.9917 - val_loss: 0.0301
+18.	Epoch - accuracy: 0.9923 - loss: 0.0237 - val_accuracy: 0.9869 - val_loss: 0.0444
+19.	Epoch - accuracy: 0.9934 - loss: 0.0192 - val_accuracy: 0.9901 - val_loss: 0.0341
+20.	Epoch - accuracy: 0.9947 - loss: 0.0165 - val_accuracy: 0.9909 - val_loss: 0.0279
+
+#Grafikler
+Model doğruluk oranı grafiği ve model kayıp grafiği yaptım.
+
+##Test Sonuçları
+Test verisi üzerinde gerçekleştirdiğim değerlendirmeler sonucunda model, pirinç türlerini %99,6 doğruluk oranıyla başarılı bir şekilde sınıflandırmıştır. Elde edilen tahminler, gerçek etiketlerle karşılaştırdım ve modelin büyük ölçüde doğru tahminlerde bulunduğu gözlemledim.
+
+##Karşılaşılan Zorluklar
+İlk eğittiğim modelde doğruluk oranı sadece %20 civarındaydı. Bu düşük sonucun sebebinin sınıfların yanlış etiketlenmesi olduğunu fark ettim. Etiketlerde gerekli düzenlemeleri yaptıktan sonra model başarısı artış gösterdi.
+Daha sonra, görsellerin boyutunu 64x64 yerine 32x32 piksele düşürdüm. Bu sayede model hem daha hızlı eğitildi hem de doğruluk oranı belirgin şekilde arttı.
+
+#Sonuç Olarak
+Modelin eğitim sürecini tamamlayarak başarılı bir şekilde sonuç elde ettim. Eğitilen modeli .h5 formatında kaydettim ve böylece daha sonra yeniden kullanmak üzere hazır hale getirdim.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 # İbrahim Hakkı HARMANKAYA Derin Öğrenme Dersi Vize Ödevi
 
 Bu çalışmada, beş farklı pirinç türünü sınıflandırarak bir derin öğrenme modeli tasarlanmış ve uygulanmıştır.
